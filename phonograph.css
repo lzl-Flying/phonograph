@@ -1,0 +1,62 @@
+.wrapper {
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width: 400px;
+    height: 550px;
+    border: 1px solid #ddd;
+}
+.wrapper .pin {
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translate(-50%,0);
+    width: 5px;
+    height: 150px;
+    background: #aaa;
+    transform-origin: top;
+    transform: rotateZ(-45deg);
+    transition: all 800ms linear;
+    z-index: 999;
+}
+.wrapper .pin .tab {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+}
+.wrapper .btnpin {
+    transform: rotateZ(0deg);
+}
+.wrapper .turntable {
+    width: 250px;
+    height: 250px;
+    border: 50px solid #fdd;
+    border-radius: 50%;
+    background: url('./turntableMusic.jpg');
+    background-size: 100% 100%;
+    margin-left: 25px;
+    margin-top: 100px;
+    animation: move 10s linear;
+    animation-play-state: paused;
+    animation-iteration-count: infinite;
+}
+@keyframes move {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
+.wrapper button {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    width: 100px;
+    height: 50px;
+    transform: translateX(-50%);
+}
